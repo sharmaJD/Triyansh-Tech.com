@@ -45,3 +45,31 @@ section {
     width: 100%;
     display: block;
 }
+
+.footer-area .single-footer-widget {
+    margin-bottom: 50px;
+}
+
+.footer-area .social-widget {
+    text-align: right;
+}
+
+.footer-area .footer-social a {
+    margin-left: 10px;
+    color: #777;
+}
+
+.footer-area .footer-social a:hover {
+    color: #f9f9f9;
+}
+
+.footer-area .follow-us-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-area .follow-us-widget .footer-social {
+    justify-content: flex-end;
+}
+

@@ -2315,6 +2315,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-color: #04091e;
 }
 
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .footer-area h6 {
     color: #fff;
     margin-bottom: 25px;
@@ -2439,6 +2445,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (max-width: 800px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
     .social-widget {
         margin-top: 30px;
     }
@@ -2452,6 +2462,26 @@ body.mobile-nav-active #mobile-nav-toggle {
 .footer-text i {
     color: #fab700;
 }
+
+.whole-wrap {
+    background-color: #fff;
+}
+
+.section-top-border {
+    padding: 50px 0;
+    border-top: 1px dotted #eee;
+}
+
+
+.whole-wrap {
+    background-color: #fff;
+}
+
+.section-top-border {
+    padding: 50px 0;
+    border-top: 1px dotted #eee;
+}
+
 
 .whole-wrap {
     background-color: #fff;
