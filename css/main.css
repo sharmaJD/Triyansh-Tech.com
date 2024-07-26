@@ -1814,11 +1814,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 .banner-area {
     background: url(https://t3.ftcdn.net/jpg/05/30/81/70/240_F_530817031_Dc6gHBOUgC6vYIQdZxQKTpMcyRfOo7OF.jpg) center;
     background-size: cover;
+    height: 450px; /* Set a fixed height for the banner */
+    display: flex; /* Use flex to center content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
 }
 
 @media (max-width: 767.98px) {
-    .banner-area .fullscreen {
-        height: 700px !important;
+    .banner-area {
+        height: 300px; /* Adjust height for smaller screens */
     }
 }
 
@@ -1828,21 +1832,22 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-area .primary-btn {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px; /* Adjust padding */
+    padding-right: 20px; /* Adjust padding */
 }
 
 .banner-content {
     text-align: center;
+    padding: 10px; /* Add some padding for spacing */
 }
 
 .banner-content h1 {
     color: #fff;
-    font-size: 48px;
+    font-size: 36px; /* Reduce font size */
     font-weight: 700;
-    line-height: 1em;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    line-height: 1.2em; /* Adjust line height */
+    margin-top: 10px; /* Adjust margin */
+    margin-bottom: 10px; /* Adjust margin */
 }
 
 .banner-content h1 span {
@@ -1851,25 +1856,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 991.98px) {
     .banner-content h1 {
-        font-size: 36px;
-    }
-}
-
-@media (max-width: 991.98px) {
-    .banner-content h1 br {
-        display: none;
-    }
-}
-
-@media (max-width: 1199.98px) {
-    .banner-content h1 {
-        font-size: 45px;
+        font-size: 28px; /* Reduce font size for medium screens */
     }
 }
 
 @media (max-width: 414px) {
     .banner-content h1 {
-        font-size: 40px;
+        font-size: 24px; /* Further reduce font size for small screens */
     }
 }
 
@@ -1885,6 +1878,7 @@ body.mobile-nav-active #mobile-nav-toggle {
         display: none;
     }
 }
+
 
 .header-btn {
     background-color: #fab700;
@@ -2311,25 +2305,26 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .footer-area {
-    padding-top: 100px;
+    padding-top: 50px; /* Decreased from 100px to 50px */
+    padding-bottom: 20px; /* Added padding-bottom to give some space at the bottom */
     background-color: #04091e;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .footer-area h6 {
     color: #fff;
-    margin-bottom: 25px;
+    margin-bottom: 15px; /* Decreased from 25px to 15px */
     font-size: 18px;
     font-weight: 600;
 }
 
 .footer-social a {
-    padding-right: 25px;
+    padding-right: 15px; /* Decreased from 25px to 15px */
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -2455,13 +2450,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .footer-text {
-    padding-top: 20px;
+    padding-top: 10px; /* Decreased from 20px to 10px */
 }
 
 .footer-text a,
 .footer-text i {
     color: #fab700;
 }
+
 
 .whole-wrap {
     background-color: #fff;
@@ -2955,6 +2951,88 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #f9f9ff;
 }
 
+.product-area .single-product {
+    margin-bottom: 30px;
+}
+
+.product-area .product-image {
+    max-width: 250px; /* Set a maximum width for all product images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto 20px; /* Center images and add bottom margin for spacing */
+}
+
+.product-area .single-product .product-details {
+    text-align: center; /* Center align product details */
+}
+
+@media (min-width: 576px) {
+    .product-area .single-product {
+        padding: 15px; /* Add padding around products for spacing */
+    }
+}
+
+@media (min-width: 768px) {
+    .product-area .single-product {
+        padding: 20px; /* Increase padding for larger screens */
+    }
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 300px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensure the images cover the fixed height while maintaining aspect ratio */
+}
+.product-area {
+    padding: 50px 0;
+}
+.single-product {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.single-product img {
+    width: 100%;
+    height: 300px; /* Set a fixed height for all product images */
+    object-fit: fill; /* Ensure the images cover the fixed height while maintaining aspect ratio */
+    margin-bottom: 15px; /* Add space below each image */
+}
+.product-details {
+    padding: 10px;
+}
+.primary-btn {
+    margin-top: 10px;
+}
+
+.owl-prev, .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(121, 111, 111, 0.5);
+    color: rgb(234, 231, 231);
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    width: 40px; /* Adjust width */
+    height: 40px; /* Adjust height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Transition for the zoom effect */
+}
+.owl-prev:hover, .owl-next:hover,
+.owl-prev:focus, .owl-next:focus {
+    transform: scale(1.2) translateY(-50%); /* Zoom out effect */
+}
+.owl-prev {
+    left: 10px; /* Adjust as needed */
+}
+.owl-next {
+    right: 10px; /* Adjust as needed */
+}
+
+        
 /*
 ################
                End Blog Details  Page style

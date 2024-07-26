@@ -25,9 +25,21 @@
 <link rel="stylesheet" href="css/nice-select.css">
 <link rel="stylesheet" href="css/hexagons.min.css">
 <link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 <link rel="stylesheet" href="css/owl.carousel.css">
 <link rel="stylesheet" href="css/main.css">
+<style>
 
+.carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            background-color: rgba(0, 0, 0, 0.5); /* Light black background */
+            border-radius: 60%; /* Circle shape */
+            width: 20px; /* Larger circle size */
+            height: 25px; /* Larger circle size */
+            font-size: 2px; /* Smaller icon size */
+        }
+</style>
 </head>
 <body>
 <header id="header" id="home">
@@ -85,80 +97,97 @@
 <div class="row d-flex align-items-center justify-content-center">
 <div class="about-content col-lg-12">
 <h1 class="text-white">
-Projects
+Walkie-Talkie
 </h1>
-<p class="text-white link-nav"><a href="index.html">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="projects.html"> Projects</a></p>
+<p class="text-white link-nav"><a href="index.html">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="WT.html"> Products</a></p>
 </div>
 </div>
 </div>
 </section>
-
-
 <section class="project-area section-gap" id="project">
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-md-8 pb-30 header-text text-center">
-<h1 class="mb-10">Latest Finished Projects</h1>
+<h1 class="mb-10">Our Products</h1>
 <p>
-    At Triyansh Tech, our projects showcase our commitment to quality and innovation. From <strong>smart homes</strong> to <strong>industrial automation</strong> and <strong>student college projects</strong>, we deliver exceptional results every time. Trust us to bring your vision to life with precision and expertise.
+    "Reliable, long-range communication for every situation. Perfect for security, events, and outdoor adventures."
 </p>
 </div>
 </div>
 <div class="row">
-<div class="col-lg-6 col-md-6">
-<a href="img/E1.jpeg" class="img-gal">
-<img class="img-fluid single-project" src="img/E1.jpeg" alt>
-</a>
-</div>
-<div class="col-lg-5 col-md-6">
-<a href="img/ss.jpg" class="img-gal">
-<img class="img-fluid single-project" src="img/ss.jpg" alt>
-</a>
-</div>
-<div class="col-lg-6 col-md-6">
-<a href="img/E2.jpeg" class="img-gal">
-<img class="img-fluid single-project" src="img/E2.jpeg" alt>
-</a>
-</div>
-<div class="col-lg-5 col-md-5">
-<a href="img/installation.jpg" class="img-gal">
-<img class="img-fluid single-project" src="img/installation.jpg" alt>
-</a>
-</div>
-</div>
-</div>
-</section>
-
-
-<section class="cat-area section-gap" id="feature">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="single-cat d-flex flex-column">
-                    <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-magic-wand"></span></span></a>
-                    <h4 class="mb-20" style="margin-top: 23px;">Customer-Centric Approach</h4>
-                    <p>
-                        We prioritize understanding and meeting our customers' unique needs, tailoring our services to ensure high satisfaction. This focus on customization and quality drives our success in new markets.  </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-cat">
-                    <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-rocket"></span></span></a>
-                    <h4 class="mt-40 mb-20">Innovative Solutions</h4>
-                    <p>
-                        By staying at the forefront of technology, we provide cutting-edge electrical, automation, and CCTV systems. Our innovative approach ensures unmatched reliability and efficiency, setting us apart from competitors.                        </p>
+    <div class="col-lg-4 col-md-6">
+        <div class="single-product">
+            <div id="carouselt-360" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="img-fluid" src="img/360.png" alt="t-360 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="img-fluid" src="img/t-360-2.jpeg" alt="t-360 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="img-fluid" src="img/t-360-3.jpeg" alt="t-360 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="img-fluid" src="img/t-360-4.webp" alt="t-360 3">
+                    </div>
                 </div>
+                <a class="carousel-control-prev" href="#carouselt-360" role="b" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselt-360" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <div class="col-lg-4">
-                <div class="single-cat">
-                    <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-bug"></span></span></a>
-                    <h4 class="mt-40 mb-20">Quality and Reliability</h4>
-                    <p>
-                        Our reputation for high-quality workmanship and dependable service helps build trust with new customers. Triyansh Tech consistently delivers exceptional results, fostering strong market presence and growth.                        </p>
-                </div>
-            </div>
-        </div>
+    <div class="product-details">
+    <h4>Yanton T-360</h4>
+    <p>Frequency: 136-174MHz or 400-480MHz/Noise Cancelling/Waterproof IP67/VOX Function/Flashlight Funtion/2*250 Memory Channels/Vibration</p>
+    <h6>$120.00</h6>
+    <a href="Contact.html"class="primary-btn text-uppercase" >Contact</a>
     </div>
+    </div>
+    </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="single-product">
+                <div id="carouselt-850" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="img-fluid" src="img/850.png" alt="t-850 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="img/t-850-1.webp" alt="t-850 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="img/t-850-2.jpeg" alt="t-850 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="img/t-850-3.jpeg" alt="t-850 3">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselt-850" role="b" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselt-850" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+    <div class="product-details">
+    <h4>Yanton T-850</h4>
+    <p>Frequency range: 136-174Mhz/350-390Mhz/400-480Mhz/Waterproof IP67/Dustproof/Shockproof/2800mAh Polymer Li-ion Battery/Remote Kill, Stun, Activate & Revive</p>
+    <h6>$80.00</h6>
+    <a href="Contact.html"class="primary-btn text-uppercase" >Contact</a>
+    </div>
+    </div>
+    </div>
+    
+</div>
+</div>
 </section>
+
 
 <section class="feedback-area aboutus-feedback section-gap" id="feedback">
 <div class="container">
