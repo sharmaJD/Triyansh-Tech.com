@@ -1,4 +1,5 @@
-/*--------------------------- Color variations ----------------------*/
+/*--------------------------- Color variation
+ ----------------------*/
 
 /* Medium Layout: 1280px */
 
@@ -70,6 +71,9 @@ a:hover {
     outline: 0;
 }
 
+.row {
+    overflow: hidden; /* Prevents flex children from overflowing */
+}
 /**
  *  Typography
  *
@@ -86,7 +90,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Geometric", sans-serif;
     color: #222222;
     line-height: 1.2em !important;
     margin-bottom: 0;
@@ -102,7 +106,7 @@ h6 {
 .h6 {
     margin-bottom: 0;
     margin-top: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Geometric", sans-serif;
     font-weight: 600;
     color: #222222;
 }
@@ -1636,7 +1640,7 @@ h6 {
     position: fixed;
     right: 15px;
     z-index: 999;
-    top: 60px;
+    top: 70px;
     border: 0;
     background: none;
     font-size: 24px;
@@ -1648,7 +1652,7 @@ h6 {
 
 @media (max-width: 767px) {
     #mobile-nav-toggle {
-        top: 22px;
+        top: 26px;
     }
 }
 
@@ -1675,8 +1679,8 @@ h6 {
     bottom: 0;
     z-index: 998;
     background: rgba(0, 0, 0, 0.8);
-    left: -260px;
-    width: 260px;
+    left: -280px;
+    width: 280px;
     overflow-y: auto;
     transition: 0.4s;
 }
@@ -1688,7 +1692,7 @@ h6 {
 }
 
 #mobile-nav ul li {
-    position: relative;
+    position: inherit;
 }
 
 #mobile-nav ul li a {
@@ -1734,7 +1738,7 @@ h6 {
     width: 100%;
     height: 100%;
     z-index: 997;
-    top: 0;
+    top: 1;
     left: 0;
     position: fixed;
     background: rgba(0, 0, 0, 0.7);
@@ -1756,9 +1760,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .section-gap {
-    padding: 120px 0;
+    padding: 100px 0;
 }
+.single-offer {
+    margin: 20px; /* Adjust the value as needed */
+    text-align: center;
 
+}
 .primary-btn {
     background-color: #fab700;
     line-height: 42px;
@@ -1820,11 +1828,23 @@ body.mobile-nav-active #mobile-nav-toggle {
     justify-content: center; /* Center content horizontally */
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     .banner-area {
-        height: 300px; /* Adjust height for smaller screens */
+        height: 350px; /* Adjust height for smaller screens */
     }
 }
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    iframe {
+      width: 100%; /* Make it responsive */
+      height:300px; /* Increase height for mobile */
+    }
+  }
 
 .banner-area .overlay {
     background: #000;
@@ -1843,7 +1863,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .banner-content h1 {
     color: #fff;
-    font-size: 36px; /* Reduce font size */
+    font-size: 32px; /* Reduce font size */
     font-weight: 700;
     line-height: 1.2em; /* Adjust line height */
     margin-top: 10px; /* Adjust margin */
@@ -2150,35 +2170,33 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding-top: 60px;
 }
 
-.feedback-area {
-    background: url(../img/feedback-bg.jpg) center;
-    background-size: cover;
-}
+
 
 .overlay-bg {
     background-color: #000;
     opacity: .7;
 }
 
-.feedback-left {
-    background: url(../img/video-bg.jpg) center;
-    background-size: cover;
-    padding: 130px 0;
-}
+.feedback-area {
+    background-color: #f2f2f2; /* Background color for the entire feedback section */
+    padding: 30px 0; }
 
-.feedback-left .play-btn {
-    z-index: 2;
-}
+    .feedback-contents {
+        display: flex;
+        justify-content: center;
+        gap: 10px; /* Adds spacing between feedbacks */
+        margin-top: 10px;
+        width: 100%; /* Ensure row takes full width */
 
-.feedback-left .overlay-bg {
-    background-color: rgba(250, 183, 0, 0.7);
-}
-
-@media (max-width: 960px) {
-    .feedback-left {
-        margin-bottom: 30px;
     }
-}
+    
+    .single-feedback-carusel {
+        background-color: rgba(181, 178, 178, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%; /* Ensures feedbacks take full width of their column */
+    }
+    
 
 .feedback-right .star {
     margin-left: 20px;
@@ -2189,7 +2207,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .feedback-right .owl-dots {
-    text-align: left;
+    text-align: center;
     bottom: 5px;
     margin-top: 20px;
     width: 100%;
@@ -2220,89 +2238,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #fab700;
 }
 
-.blog-area h1 {
-    text-align: center;
-    margin-bottom: 25px;
-    font-weight: 600;
-    text-transform: capitalize;
-}
 
-.blog-area p {
-    margin-bottom: 45px;
-    text-align: center;
-}
-
-.single-blog .thumb {
-    overflow: hidden;
-}
-
-.single-blog h4 {
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-top: 35px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-}
-
-.single-blog a {
-    color: #222;
-}
-
-.single-blog .name {
-    font-size: 13px;
-    font-weight: 100;
-}
-
-.single-blog p {
-    text-align: left;
-    margin-top: 15px;
-}
-
-.single-blog .bottom {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.single-blog .bottom span {
-    margin-left: 10px;
-}
-
-@media (max-width: 768px) {
-    .single-blog {
-        margin-bottom: 30px;
-    }
-    .single-blog .meta {
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 767px) {
-    .single-blog .meta {
-        margin-top: 0px;
-    }
-}
-
-.single-blog .f-img {
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-}
-
-.single-blog:hover {
-    cursor: pointer;
-}
-
-.single-blog:hover h4 {
-    color: #fab700;
-}
-
-.single-blog:hover .f-img {
-    cursor: pointer;
-    transform: scale(1.05);
-}
 
 .footer-area {
     padding-top: 50px; /* Decreased from 100px to 50px */
@@ -2323,6 +2259,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-weight: 600;
 }
 
+
 .footer-social a {
     padding-right: 15px; /* Decreased from 25px to 15px */
     -webkit-transition: all 0.3s ease 0s;
@@ -2336,7 +2273,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .footer-social i {
-    color: #cccccc;
+    color: #e7e5e5;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -2531,7 +2468,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .aboutus-feedback {
-    background: #fff;
+    background: rgb(88, 89, 90);
 }
 
 .contact-page-area {
@@ -2956,7 +2893,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .product-area .product-image {
-    max-width: 250px; /* Set a maximum width for all product images */
+    max-width: 20px; /* Set a maximum width for all product images */
     height: auto; /* Maintain aspect ratio */
     margin: 0 auto 20px; /* Center images and add bottom margin for spacing */
 }
@@ -2977,10 +2914,26 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 }
 
-.carousel-item img {
+.offers-area .single-offer .thumb {
     width: 100%;
-    height: 300px; /* Set a fixed height for all images */
-    object-fit: cover; /* Ensure the images cover the fixed height while maintaining aspect ratio */
+    max-width: 320px;  /* Adjust as per your layout */
+    height: 250px;     /* Consistent height for all images */
+    overflow: hidden;
+    margin: 0 auto;    /* Center the images */
+}
+
+.offers-area .single-offer .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits without stretching */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+@media (max-width: 768px) {
+    .offers-area .single-offer .thumb {
+        max-width: 200px;  /* Slightly smaller for smaller screens */
+        height: 160px;     /* Adjust height to maintain proportions */
+    }
 }
 .product-area {
     padding: 50px 0;
@@ -3031,8 +2984,35 @@ body.mobile-nav-active #mobile-nav-toggle {
 .owl-next {
     right: 10px; /* Adjust as needed */
 }
-
+.text-white {
+    color: white;
+}
         
+/* Ensure images are responsive */
+.slider img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+/* Adjust carousel container */
+.slider {
+    margin: 10px 0;
+}
+
+/* For better spacing between slides */
+.slider .slide {
+    padding: 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 800px) {
+    .slider .slide {
+        padding: 5px; /* Reduce padding on smaller screens */
+    }
+}
+
 /*
 ################
                End Blog Details  Page style

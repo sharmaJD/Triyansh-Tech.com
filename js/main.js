@@ -162,9 +162,48 @@ $(document).ready(function() {
         }
     });
 
+    
+    $(document).ready(function () {
+        $(".slider").owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 1500,
+            autoplayHoverPause: true,
+            nav: true,
+            dots: true,
+            navText: [
+                '<i class="fa fa-chevron-left"></i>',
+                '<i class="fa fa-chevron-right"></i>'
+            ],
+            responsive: {
+                0: {
+                    items: 1,  // Show 1 slide on mobile
+                },
+                768: {
+                    items: 3,  // Show 3 slides on desktop
+                }
+            }
+        });
+    });
+    
+$(document).ready(function () {
+$(".active-offers-carousel").owlCarousel({
+items: 3,
+loop: true,
+autoplay: true,
+autoplayTimeout: 3000,
+autoplayHoverPause: true,
+nav: true,
+dots: true,
+navText: [
+'<i class="fa fa-chevron-left"></i>',
+'<i class="fa fa-chevron-right"></i>'
+]
+});
+});
 
     $('.active-realated-carusel').owlCarousel({
-        items: 1,
+        items: 2,
         loop: true,
         margin: 100,
         dots: true,
@@ -184,9 +223,10 @@ $(document).ready(function() {
         }
     });
 
+    
 
     $('.active-about-carusel').owlCarousel({
-        items: 1,
+        items: 2,
         loop: true,
         margin: 100,
         nav: true,
@@ -208,15 +248,15 @@ $(document).ready(function() {
 
 
     $('.active-review-carusel').owlCarousel({
-        items: 1,
+        items: 2,
         loop: true,
         autoplay: true,
-        margin: 30,
+        margin: 100,
         dots: true
     });
 
     $('.active-info-carusel').owlCarousel({
-        items: 1,
+        items: 2,
         loop: true,
         margin: 100,
         dots: true,
@@ -238,7 +278,7 @@ $(document).ready(function() {
     $('.active-testimonial').owlCarousel({
         items: 2,
         loop: true,
-        margin: 30,
+        margin: 100,
         dots: true,
         autoplay: true,
         nav: true,
@@ -304,6 +344,7 @@ $(document).ready(function() {
 
         }
     });
+
 
 
 
