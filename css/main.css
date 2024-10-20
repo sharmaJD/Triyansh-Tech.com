@@ -27,7 +27,11 @@ body {
     line-height: 1.625em;
     position: relative;
 }
-
+#logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 ol,
 ul {
     margin: 0;
@@ -71,9 +75,6 @@ a:hover {
     outline: 0;
 }
 
-.row {
-    overflow: hidden; /* Prevents flex children from overflowing */
-}
 /**
  *  Typography
  *
@@ -273,7 +274,9 @@ h6,
     padding-left: 0;
     padding-right: 0;
 }
-
+.row {
+    margin: 0;  /* Prevents negative margin issues */
+}
 .no-padding {
     padding: 0;
 }
@@ -596,7 +599,7 @@ h6 {
 }
 
 .progress-table-wrap {
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 .progress-table {
@@ -1517,6 +1520,17 @@ h6 {
         max-height: 40px;
     }
 }
+/* Remove the right margin completely */
+.element {
+    margin-right: 0;
+}
+
+/* Adjust the margin for mobile devices */
+@media (max-width: 768px) {
+    .element {
+        margin-right: 0;  /* Prevent overflow on small screens */
+    }
+}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -1524,45 +1538,27 @@ h6 {
 
 /* Nav Menu Essentials */
 
-.nav-menu,
-.nav-menu * {
-    margin: 0;
-    padding: 0;
+#nav-menu-container {
+    overflow: hidden;
+}
+
+.nav-menu {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;  /* Prevents items from overflowing */
 }
 
-.nav-menu ul {
-    position: absolute;
+.menu-has-children ul {
     display: none;
-    top: 100%;
-    left: 0;
-    z-index: 99;
-    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
 }
 
-.nav-menu li {
-    position: relative;
-    white-space: nowrap;
-}
-
-.nav-menu>li {
-    float: left;
-}
-
-.nav-menu li:hover>ul,
-.nav-menu li.sfHover>ul {
+.menu-has-children:hover ul {
     display: block;
 }
 
-.nav-menu ul ul {
-    top: 0;
-    left: 100%;
-}
-
-.nav-menu ul li {
-    min-width: 180px;
-    text-align: left;
-}
 
 /* Nav Menu Arrows */
 
@@ -1692,7 +1688,7 @@ h6 {
 }
 
 #mobile-nav ul li {
-    position: inherit;
+    position: relative;
 }
 
 #mobile-nav ul li a {
@@ -1839,10 +1835,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     align-items: center;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     iframe {
-      width: 100%; /* Make it responsive */
-      height:300px; /* Increase height for mobile */
+      width: 90%; /* Make it responsive */
+      height: 250px; /* Increase height for mobile */
     }
   }
 
